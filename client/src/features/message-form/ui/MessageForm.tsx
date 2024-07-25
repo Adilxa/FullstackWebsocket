@@ -23,9 +23,8 @@ const MessageForm: React.FC = () => {
             <input
                 type="text"
                 value={newMessage}
-                onChange={(e) => { setNewMessage(e.target.value); setHasError(false) }}
+                onChange={(e) => setNewMessage(e.target.value)}
                 className={`${styles.input} ${hasError ? styles.inputError : ''}`}
-                placeholder='Enter Message'
             />
             <button type="submit" className={styles.button}>Send</button>
         </form>
