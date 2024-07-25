@@ -20,7 +20,7 @@ class MessageController {
     }
   }
 
-  getMessages(req, res, next) {
+  getMessages(_, res, next) {
     try {
       const messages = messageService.getAllMessages();
       res.send(messages);

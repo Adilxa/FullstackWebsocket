@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { MessageList } from '../../../entities/message';
+import { MessageList } from '../../../entities/messagelist';
 import { useMessages } from '../../../features/message-form/hooks/useMessages';
 import MessageForm from './../../../features/message-form/ui/MessageForm';
 
@@ -18,10 +18,11 @@ const MessagePage: React.FC = () => {
   }, [queryClient]);
 
   return (
-    <div>
-      <h1>Messages</h1>
-      <MessageList messages={messages} />
-      <MessageForm />
+    <div className='container'>
+      <div className='content_form'>
+        <MessageList messages={messages} />
+        <MessageForm />
+      </div>
     </div>
   );
 };

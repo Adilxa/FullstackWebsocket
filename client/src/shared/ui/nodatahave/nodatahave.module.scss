@@ -1,0 +1,15 @@
+.wrapper {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h5 {
+    font-size: 32px;
+    color: #333;
+  }
+  p {
+    font-size: 15px;
+  }
+}

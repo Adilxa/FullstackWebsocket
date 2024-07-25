@@ -1,7 +1,14 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient, UseMutationResult, RefetchOptions } from '@tanstack/react-query';
 import { fetchMessages, postMessage } from '../api';
+import { Message } from '../../../entities/messagelist/model';
 
-export const useMessages: any = () => {
+type UseMessagesResult = {
+    messages: Message[] | string[];
+    mutation: UseMutationResult<void, Error, string>;
+    refetch: (options?: RefetchOptions) => Promise<any>;
+};
+
+export const useMessages = (): UseMessagesResult => {
     const queryClient = useQueryClient();
 
     const { data: messages = [], refetch } = useQuery({

@@ -1,0 +1,20 @@
+.messageItem {
+  display: flex;
+  flex-direction: column;
+  background-color: #e1ffc7;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  align-self: flex-start;
+
+  &.ownMessage {
+    background-color: #a1f577;
+    align-self: flex-end;
+  }
+}
+
+.messageContent {
+  color: #333;
+  font-size: 20px;
+}

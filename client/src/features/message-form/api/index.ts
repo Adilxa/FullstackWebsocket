@@ -1,5 +1,5 @@
-import { Message } from '../../../entities/message/model';
 import { $api } from '../../../shared/api/http-client';
+import { Message } from '../../../entities/messagelist/model';
 
 export const fetchMessages = async (): Promise<Message[]> => {
     const res = await $api.get<Message[]>('/messages');
